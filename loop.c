@@ -10,5 +10,16 @@ Types of Loops:
 	4. can have more than one updation and it is also optional
 2. Do while loop
 3. while loop
+
+> break and continue:
+break: breaks the loop or case and jumps to next block of code
+continue: breaks the current loop and jumps to next iteration
+
+> Go to statement
+goto label;
+
+label: 
+//lines of codes
 */
+return 0;
 }
