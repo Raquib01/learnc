@@ -25,6 +25,7 @@ int main(void){
 	break;
 	case '%':
 	printf("%d %% %d = %d\n",(int)operand1,(int)operand2,(int)operand1%(int)operand2);
+	//here we used typecasting
 	break;
 	default:
 	printf("Invalid Entry\n");
