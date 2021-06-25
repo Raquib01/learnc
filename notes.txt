@@ -1,0 +1,287 @@
+Notes on C programming:
+**Develops by dennis ritchie in AT&T bell labs
+*Why C
+	> programmers have nearly full control
+	> fast programming language
+	> can manage memory
+	> can reach closest to machine level code
+	> lowest level programming(above assembly)
+	> use for competitive programming
+	> first step in learning coding
+
+*Implementation
+	> OS like linux and windows macs are designed in C
+	> databases and dbms are also designed in c
+	> cython, ruby, pearl language is designed in c
+	> compilers are also written in c
+	> games are designed in c for fast performance
+	> python lib are also written in c
+	> apache nginx web servers have c in it
+
+*Compilation Process
+	linux terminal command:
+	gcc -Wall -save-temps hello.c -o raquib
+
+	1. Preprocessing
+		removing comments, expanding macros, pasting header files
+		output: hello.i
+
+	2. Compilation
+		convert hello.i file to hello.s file (assembly file) and then
+		hello.s to hello.o(binary file)
+
+	3. Linking
+		combines all .o file to make one executable file .exe in windows and a.out in linux
+
+*variables
+	1. can have alphabets, numbers and underscore
+	2. cant start with numbers
+	3. cant have reserved keywords
+	4. case sensitive
+
+*constant
+	1. declaring constant using preprocessing command
+		#define PI 3.14
+	2. declaring constant using const keyword
+		const float g = 9.807;
+
+*Data Types
+	1. Primitive data types
+		int, char, float, double
+	2. Derived data types:
+		array, pointer, structure and union
+	3. enumeration
+	4. void
+
+*Following are the primitive data types in C and their size according to 64-bit architecture
+	>signed int
+	 Format Specifier: %d
+	 Size: 32bit
+
+	>unsigned int
+	 Format Specifier: %u
+	 Size: 32bit
+
+	>signed short int
+	 Format Specifier: %hd
+	 Size: 16bit
+
+	>unsigned short int
+	 Format Specifier: %hu
+	 Size: 16bit
+
+	>signed long int
+	 Format Specifier: %ld
+	 Size: 64bit
+
+	>unsigned long int
+	 Format Specifier: %lu
+	 Size: 64bit
+
+	>signed char
+	 Format Specifier: %c
+	 Size: 8bit
+
+	>unsigned char
+	 Format Specifier: %c
+	 Size: 8bit
+
+	>float
+	 Format Specifier: %a.bf
+	 Size: 32bit
+
+	>double
+	 Format Specifier: %lf
+	 Size: 64bit
+
+	>long double
+	 Format Specifier: %Lf
+	 Size: 128bit
+
+*Operators
+	1. Arithmetic Opearators
+		addition, subtraction, multiplication, division, modulus
+	
+	2. Relational Opearator
+		==, !=, >, <, >=, <=
+
+	3. Updation Operators
+		a++, a--, ++a, --a
+
+	4. Assignment Operators
+	
+	5. Logical Opearator
+		&&, ||, !
+	
+	6. Bitwise Opearator
+		&(and), |(or), ^(exclusive or), ~(compliment), <<(left shift), >>(right shift)
+	
+	7. Miscellanous Opearator
+		sizeof, ternery, &, pointer
+
+*Escape Sequences
+	1. \a for alarm sound
+	2. \b for backspace
+	3. \n for new line
+	4. \f for form feed
+	5. \r for carriage return
+	6. \t for horizontal tab
+	7. \v for vertical tab
+	8. \\ for backslash 
+	9. \' for single quote
+	10. \" for double quote
+	11. \? for question mark
+	12. \nnn for octal number
+	13. \xhh for hex number
+
+*if else
+	1. only if
+		if(condition){
+			code to be executed
+		}
+
+	2. if and else
+		if(condition){
+			code to be executed
+		}
+		else{
+			code to be executed
+		}
+
+	3. if else ladder
+		if(condition){
+			code to be executed
+		}
+		else if(condition){
+			code to be executed
+		}
+		else{
+			code to be executed
+		}
+
+*switch case
+	switch can only accept int and char
+
+	switch(variable){
+		case 1:
+		code;
+
+		case 'a':
+		code;
+
+		case 2:
+		case 3:
+		code for 2 and 3
+
+		default:
+		code of not matching case
+	}
+	
+*loops
+	Types of Loops:
+		1. For loop:
+			properties:
+			1. can have more than 1 initialization like for(i=0;j=0;i<5;i++)
+			2. initialization is optional like for(;i<5;i++)
+			3. conditional part is also optional like for(i=0;;i++)
+			4. can have more than one condition, but other conditions will be treated as statements
+			5. can have more than one updation and it is also optional
+		2. Do while loop
+		3. while loop
+
+*break and continue:
+	break: breaks the loop or case and jumps to next block of code
+	continue: breaks the current loop and jumps to next iteration
+
+*go to statement
+	goto label;
+
+	label: 
+	//lines of codes
+
+*Typecasting
+	int a = 11;
+	int b = 5;
+	float result = (float)a/b
+
+*functions
+	>declaration
+		datatype function(parameter1, parameter2, ...){
+			code here
+		}
+
+	>Calling
+		function(argument1, argument2, ...);
+
+*Recursion / recursive function
+	function that calls itself
+
+*arrays
+	collection of data items having same data types
+		1. one dimensional array (ika list)
+			int arr[] = {1, 2, 3, 4};
+
+		2. two dimensional array (ika matrices)
+			int arr[2][4]={{2,4,6,8},{5,10,15,20}};
+
+*pointers
+	stores the address of another variable
+	can be dereference with *
+	**NULL pointer is a pointer pointing to nothing
+
+*pointer Arithmetic
+	1. pntr++
+	2. pntr--
+	3. pntr+n
+	4. pntr-n
+	5. pntr[n]
+
+*array pointer
+	int arr[] = {1,2,4};
+	here arr is a array pointer pointing towards first element of an array
+	this pointer is a constant pointer, u cant modify it
+
+
+
+*dereference method of an array
+	> method to get value
+		arr[3];
+		*(arr+3)
+		*(&arr[3])
+	> methods to get address
+		arr+3
+		&arr[3]
+
+*function calls
+	we can call function in two ways
+		1. call by value
+			func(a);
+			changes to 'a' in func will not reflect in main funcion
+		2. call by reference
+			func(&a)
+			changes to 'a' in func will get reflect in main function
+
+*passing arrays in function
+	1. first way
+		main{
+		func(arr);
+		here we pass the address of first element of an arr in func
+		}
+
+		int func(int array[]){
+			here we created anothere array having same address as arr in main
+			array[3] = 67;
+			changes like this will get reflected in main
+		}
+	
+	2. second way
+		main{
+			func(arr);
+		}
+
+		func(int* pntr){
+			here we stored the address of the first element of arr in pntr
+			*(pntr+3)= 67;
+			changes like this will get reflected in the main function
+
+		}

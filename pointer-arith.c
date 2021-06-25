@@ -5,6 +5,7 @@ int main(void){
 	//	2. --
 	//	3. +
 	//	4. -
+	//  5. pntr[5]
 
 	//size of int is 4byte therefore ++ means add 4 and -- means minus 4
 	int var = 5;

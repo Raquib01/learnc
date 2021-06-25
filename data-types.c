@@ -7,7 +7,7 @@ Data Types
 3. enumeration
 4. void
 */
-	printf("Following are the data types in C and their size according to 64-bit architecture\n");
+	printf("Following are the primitive data types in C and their size according to 64-bit architecture\n");
 
 	printf(">signed int\n");
 	printf(" Format Specifier: %%d\n");
