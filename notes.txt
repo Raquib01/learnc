@@ -31,7 +31,7 @@ Notes on C programming:
 		hello.s to hello.o(binary file)
 
 	3. Linking
-		combines all .o file to make one executable file .exe in windows and a.out in linux
+		combines all .o file to make one executable file .exe in windows
 
 *variables
 	1. can have alphabets, numbers and underscore
@@ -296,3 +296,46 @@ Notes on C programming:
 		a. printf("%s",name);
 		b. custom function using while loop
 		c. puts(name)
+
+	3. Strings function
+		a. strcmp: string compare
+		b. strlen: string length
+		c. strcat: string concatenation
+		d. strcpy: string copy
+
+*Structure
+	user defined data type
+	syntax: 
+		struct [structure_name]{
+			datatype1;
+			datatype2;
+			datatype3;
+		}
+		[sturcture_variables];
+
+				OR
+
+		struct [structure_name]{
+			datatype1;
+			datatype2;
+			datatype3;
+		};
+		struct [structure_name] [variables];
+	
+	defining struct:
+		struct employee e1;
+		e1.id = 2345;
+		e1.name = "raquib";
+
+	sturcture member operator (.)
+
+*Typedef
+	    syntax: typedef <old-name> <new-name>
+	method 1:
+		typedef struct worker{
+	    	int id;
+	    	int wages;
+		}wrkr;
+
+	method 2
+		typedef struct worker wrkr;

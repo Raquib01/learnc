@@ -11,6 +11,7 @@ int main(void){
 	int x = 3;
 	func1(x);	//here x is an argument...we are passing the value of x in func1
 	func2(&x);	//here we are passing address of x in func2
+	printf("%d",x);
 	return 0;
 }
 
@@ -23,7 +24,7 @@ int func1(int a){
 }
 
 int func2(int* b){
-	b++;
+	(*b)++;
 	//here address of x is copied in pointer b
 	//therefore b++ will change the value of x in the main function
 	//this is call by reference

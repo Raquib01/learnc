@@ -19,6 +19,9 @@ int fibonacci_iterative(int n){
 
 
 int main(void){
+	//try for 42...
+	//iterative will take much less time than recursion
+	//becos, here recursion is taking same case 3 times
 	int n;
 	printf("Enter the value of n\t");
 	scanf("%d",&n);
