@@ -339,3 +339,48 @@ Notes on C programming:
 
 	method 2
 		typedef struct worker wrkr;
+*union
+	very similar to struct, but u can use one data at a time
+	all data stored in one sharing location having size equal to largest data size
+	syntax similar to struct, use 'union' instead 'struct'
+
+*global variables: variable declared globally, and have the global scope
+*local variables: variable declared locally, and have the local scope
+*precedence of local var > precedence of global var
+
+*static variable:
+	variable that preserve its value and not initialized again
+	it remains in memory througout the run of program
+	static variables are initialized to zero if not mentioned
+	static var can only have constant rvalue
+	syntax: 
+		static int a = 6;
+
+*Memory Model
+	 ___________
+	|	Heap	| --> stores data dynamically
+	|___________|
+	|	Stack	| --> stores data in stack (LIFO) form
+	|___________|
+	|  Global   | --> global and static variables are stored before code run
+	|	And		| 	   ___________________________________________________________________
+	|Static var | --> |  data (stores initialised var) |  bss (stores uninitialised var)  |
+	|___________|	  |________________________________|__________________________________|
+	|    Code   |
+	|___________| --> aka text segment. stores text
+
+*dynamic memory allocation
+	dynamic memory allocation is a way to allocate and free memory during run time.
+
+	dynamic memory allocation function:
+		a. malloc: to perform a memory allocation(doesnt initialise)
+			ptr = (ptr_type)malloc(size_in_bytes);
+		
+		b. calloc: to create contiguous memory alloction(initialised with 0)
+			ptr = (ptr_type)calloc(n,size_in_bytes);
+		
+		c. realloc: to re allocate memory
+			ptr = (ptr_type)realloc(old_ptr,new_size);
+		
+		d. free: free the memory
+			free(ptr);
