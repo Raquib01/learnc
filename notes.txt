@@ -384,3 +384,47 @@ Notes on C programming:
 		
 		d. free: free the memory
 			free(ptr);
+
+*Libraries
+	stdio.h --> for input output fucntions
+	string.h --> for string functions
+	stdlib.h --> for dynamic memory allocation functions
+
+*Storage Class
+	1. automaic
+		keyword: auto
+		scope: local
+		initialised value: garbage
+		lifetime: till function ends
+
+	2. External
+		keyword: extern
+		scope: global
+		initialised value: 0
+		lifetime: throughout the program
+
+	3. Static
+		keyword: static
+		scope: local
+		initialised value: 0
+		lifetime: throughout the program
+	
+	4. Register
+		keyword: register
+		scope: local
+		initialised value: garbage
+		lifetime: till the functions ends
+
+*declaration: to tell compiler about var_name and var_type and no space reserved
+*definition: to tell compiler about var_name and var_type and space reserved
+	
+*Random variable Generator
+	-providing seeed:
+		srand(time(NULL));
+		rand();
+
+	-providing upper value
+		rand()%upper_value;
+	
+	-providing upper and lower value
+		rand()((upper-lower+1)+lower)
