@@ -27,6 +27,7 @@ void parser(char *input){
     }
 
     //removing unwanted space from the ending
+    //strlen(input)-1 becos last char is null
     while (input[strlen(input) - 1] == ' '){
         input[strlen(input) - 1] = '\0';
     }
@@ -34,9 +35,9 @@ void parser(char *input){
 
 int main()
 {
-    char input[] = "<h1>    This is my first heading    </h1>";
+    char input[100];
+    fgets(input,100,stdin);
     parser(input);
     printf("%s", input);
-    printf("O");
     return 0;
 }

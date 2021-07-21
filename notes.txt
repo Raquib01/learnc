@@ -98,6 +98,10 @@ Notes on C programming:
 	 Format Specifier: %Lf
 	 Size: 128bit
 
+	 >pointer
+	 Format Specifier: %s
+	 Size: 16bit
+
 *Operators
 	1. Arithmetic Opearators
 		addition, subtraction, multiplication, division, modulus
@@ -345,6 +349,7 @@ Notes on C programming:
 	syntax similar to struct, use 'union' instead 'struct'
 
 *global variables: variable declared globally, and have the global scope
+	global var initialised to zero, if not mentioned
 *local variables: variable declared locally, and have the local scope
 *precedence of local var > precedence of global var
 
@@ -389,6 +394,7 @@ Notes on C programming:
 	stdio.h --> for input output fucntions
 	string.h --> for string functions
 	stdlib.h --> for dynamic memory allocation functions
+	time.h --> time functions
 
 *Storage Class
 	1. automaic
@@ -398,7 +404,7 @@ Notes on C programming:
 		lifetime: till function ends
 
 	2. External
-		keyword: extern
+		keyword: extern *we use extern to declare a var*
 		scope: global
 		initialised value: 0
 		lifetime: throughout the program
@@ -427,4 +433,4 @@ Notes on C programming:
 		rand()%upper_value;
 	
 	-providing upper and lower value
-		rand()((upper-lower+1)+lower)
+		rand()%((upper-lower+1)+lower)
