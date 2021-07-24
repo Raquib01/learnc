@@ -395,6 +395,7 @@ Notes on C programming:
 	string.h --> for string functions
 	stdlib.h --> for dynamic memory allocation functions
 	time.h --> time functions
+	unistd.h --> unix standard library
 
 *Storage Class
 	1. automaic
