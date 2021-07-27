@@ -1,5 +1,6 @@
-Notes on C programming:
-**Develops by dennis ritchie in AT&T bell labs
+---------------------------------------Notes on C programming----------------------------------------
+
+**Developed by Dennis Ritchie in AT&T bell labsh
 *Why C
 	> programmers have nearly full control
 	> fast programming language
@@ -18,26 +19,56 @@ Notes on C programming:
 	> python lib are also written in c
 	> apache nginx web servers have c in it
 
+*Preprocessing
+	removing comments, expanding macros, pasting header files
+
+	>Preprocessing cmd
+		preprocessing cmd starts with #
+		eg: #include,#define,#undef,#ifdef,#ifndef,#if,#else,#elif
+	
+	>Libraries
+	stdio.h --> for input output fucntions
+	string.h --> for string functions
+	stdlib.h --> for dynamic memory allocation functions
+	time.h --> time functions
+	unistd.h --> unix standard library
+
+	>NULL
+	It is a macro defined as (void*)0
+
 *Compilation Process
 	linux terminal command:
 	gcc -Wall -save-temps hello.c -o raquib
 
 	1. Preprocessing
 		removing comments, expanding macros, pasting header files
+		input: hello.c
 		output: hello.i
 
 	2. Compilation
-		convert hello.i file to hello.s file (assembly file) and then
-		hello.s to hello.o(binary file)
+		Assembly level Instructions are generated
+		input: hello.i
+		output: hello.s(assembly file)
+	
+	3. Assembly
+		machine level code is generated
+		input: hello.s(assembly file)
+		output: hello.o or hello.exe (executable file)
 
-	3. Linking
-		combines all .o file to make one executable file .exe in windows
+	4. Linking
+		combines all files into one executable files
 
 *variables
 	1. can have alphabets, numbers and underscore
 	2. cant start with numbers
 	3. cant have reserved keywords
 	4. case sensitive
+
+*global variables: variable declared globally, and have the global scope
+	global var initialised to zero, if not mentioned
+
+*local variables: variable declared locally, and have the local scope
+*precedence of local var > precedence of global var
 
 *constant
 	1. declaring constant using preprocessing command
@@ -175,10 +206,10 @@ Notes on C programming:
 
 		case 2:
 		case 3:
-		code for 2 and 3
+		code for 2 and 3;
 
 		default:
-		code of not matching case
+		code of not matching case;
 	}
 	
 *loops
@@ -232,6 +263,9 @@ Notes on C programming:
 	stores the address of another variable
 	can be dereference with *
 	**NULL pointer is a pointer pointing to nothing
+	**void pointer is a pointer having void data type
+	**Wild pointer is an uninitialised pointer, pointing to unknown memory space
+	**dangling pointer pointing to the memory, which is no longer alive
 
 *pointer Arithmetic
 	1. pntr++
@@ -348,11 +382,6 @@ Notes on C programming:
 	all data stored in one sharing location having size equal to largest data size
 	syntax similar to struct, use 'union' instead 'struct'
 
-*global variables: variable declared globally, and have the global scope
-	global var initialised to zero, if not mentioned
-*local variables: variable declared locally, and have the local scope
-*precedence of local var > precedence of global var
-
 *static variable:
 	variable that preserve its value and not initialized again
 	it remains in memory througout the run of program
@@ -390,12 +419,6 @@ Notes on C programming:
 		d. free: free the memory
 			free(ptr);
 
-*Libraries
-	stdio.h --> for input output fucntions
-	string.h --> for string functions
-	stdlib.h --> for dynamic memory allocation functions
-	time.h --> time functions
-	unistd.h --> unix standard library
 
 *Storage Class
 	1. automaic
