@@ -24,18 +24,32 @@
 
 	>Preprocessing cmd
 		preprocessing cmd starts with #
-		eg: #include,#define,#undef,#ifdef,#ifndef,#if,#else,#elif
+		eg: #include,#define,#undef,#ifdef,#ifndef,#if,#else,#elif,#pragma
 	
-	>Libraries
+	>Header files
+		-Two ways to include header files
+			#include<stdio.h> -->finds header file in system folder
+			#include"file_name" -->finds in the current directory
+
 	stdio.h --> for input output fucntions
 	string.h --> for string functions
 	stdlib.h --> for dynamic memory allocation functions
 	time.h --> time functions
 	unistd.h --> unix standard library
 
+	>Predefined macros
+		__TIME__ -->returns time as string
+		__DATE__ -->returns date as string
+		__FILE__ -->returns file name as string
+		__STDC__ -->returns 1 if compilers is compiled with ansi standard
+		__LINE__ -->returns current line no
 	>NULL
 	It is a macro defined as (void*)0
 
+*Defining macro
+	#define SQUARE(x) x*x
+	#define PI 3.14
+	
 *Compilation Process
 	linux terminal command:
 	gcc -Wall -save-temps hello.c -o raquib
