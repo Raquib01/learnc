@@ -24,7 +24,7 @@
 
 	>Preprocessing cmd
 		preprocessing cmd starts with #
-		eg: #include,#define,#undef,#ifdef,#ifndef,#if,#else,#elif,#pragma
+		eg: #include,#define,#undef,#ifdenew contentf,#else,#elif,#pragma
 	
 	>Header files
 		-Two ways to include header files
@@ -472,3 +472,22 @@
 	
 	-providing upper and lower value
 		rand()%((upper-lower+1)+lower)
+
+*FILE I/O
+	>functions
+		1. fopen("file_name","mode"); //returns file pointer
+		2. fclose(file_pointer);
+		3. fprintf(file_pointer,"content with specifiers",variables_for_specifiers);
+		4. fscanf(file_pointer,"content with specifiers",variables_for_specifiers);
+		5. fgetc(file_ptr);//stdin incase of terminal input
+		6. fgets("string",n(size),file_ptr);//stdin incase of terminal input
+		7. fputc("char",file_ptr);//stdout incase of terminal output
+		8. fputs("string",file_ptr);//stdout incase of terminal output
+
+	>Modes
+		w  -->write in a file from scratch(new file created if not exist)
+		r  -->read a file
+		a  -->new content will be added to the file
+		w+ -->first erase all content then write(scratch) and read a file (new file created if not exist)
+		r+ -->write and read a file (data will be erase as much as it require to)
+		a+ --> read from beginning but new content will add to the file
