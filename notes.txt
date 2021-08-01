@@ -491,3 +491,14 @@
 		w+ -->first erase all content then write(scratch) and read a file (new file created if not exist)
 		r+ -->write and read a file (data will be erase as much as it require to)
 		a+ --> read from beginning but new content will add to the file
+
+*Command Line Arguments
+	int main(int argc,char* argv[]){
+		//here argc is no. of Arguments
+		//and argv is array of pointers pointing to that Arguments
+		//argv[0] is file name
+	}
+
+*Function pointers
+	int(*fptr)(int)(int);
+	fptr=func1;
