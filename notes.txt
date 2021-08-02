@@ -396,6 +396,14 @@
 	all data stored in one sharing location having size equal to largest data size
 	syntax similar to struct, use 'union' instead 'struct'
 
+*enumeration
+	enum color{
+		RED,
+		WHITE,
+		GREEN
+	};
+	//we can initialise as RED=7,
+
 *static variable:
 	variable that preserve its value and not initialized again
 	it remains in memory througout the run of program
