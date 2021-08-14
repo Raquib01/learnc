@@ -1,6 +1,13 @@
 #include<stdio.h>
 
 int tri_ptern(){
+/*
+Pattern:
+*
+**
+***
+****
+*/
 	int h;
 	printf("Enter the height of triangle\t");
 	scanf("%d",&h);
@@ -13,6 +20,13 @@ int tri_ptern(){
 	return 0;
 }
 int rev_tri_ptern(){
+/*
+Pattern:
+****
+***
+**
+*
+*/
 	int h;
 	printf("Enter the height of triangle\t");
 	scanf("%d",&h);
