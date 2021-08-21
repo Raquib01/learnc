@@ -13,7 +13,9 @@ int main(){
             break;
         }
     }
-
+    if(n==1){
+        isPrime=0;
+    }
     if(isPrime){
         printf("It is a Prime Number\n");
     }
