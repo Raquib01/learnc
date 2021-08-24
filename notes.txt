@@ -516,3 +516,17 @@
 	fptr=func1; //passing address of func1 to pointer
 
 	fptr(4,5); //using pointer instead of function name
+
+*Linking Files
+  You can include header files having function prototype/declaration
+  using #include"something.h"
+
+  You can linked two files by using:
+  gcc file1.c file2.c -o myprog
+
+  you can compile single file into object file:
+  gcc -c file1.c
+  output: file1.o
+
+  you can link object file directly:
+  gcc file1.o file2.o -o myprog

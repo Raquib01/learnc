@@ -7,3 +7,5 @@
 #ignore a.out
 a.out
 .vscode/
+#ignore object files
+*.o
