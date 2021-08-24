@@ -1,7 +1,7 @@
 #include<stdio.h>
 int func1(){
-    //when func1 is called first time, it will execute thia line(line4)
-    //but when it executes again, it will skip the declaration part (line4)
+    //when func1 is called first time, it will execute thia line(line5)
+    //but when it executes again, it will skip the declaration part (line5)
     static int a;
     a++;
     return a;

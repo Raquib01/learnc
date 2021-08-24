@@ -143,7 +143,8 @@
 	 Format Specifier: %Lf
 	 Size: 128bit
 
-	 >pointer
+	 >string
+	 3+
 	 Format Specifier: %s
 	 Size: 16bit
 
@@ -405,7 +406,8 @@
 	//we can initialise as RED=7,
 
 *static variable:
-	variable that preserve its value and not initialized again
+	variable that preserve its value even if they are out of their scope and not initialized again
+	It gets stored in static segment instead of stack segment
 	it remains in memory througout the run of program
 	static variables are initialized to zero if not mentioned
 	static var can only have constant rvalue
@@ -479,7 +481,7 @@
 		rand()%upper_value;
 	
 	-providing upper and lower value
-		rand()%((upper-lower+1)+lower)
+		rand()%(upper-lower+1)+lower
 
 *FILE I/O
 	>functions
@@ -488,7 +490,7 @@
 		3. fprintf(file_pointer,"content with specifiers",variables_for_specifiers);
 		4. fscanf(file_pointer,"content with specifiers",variables_for_specifiers);
 		5. fgetc(file_ptr);//stdin incase of terminal input
-		6. fgets("string",n(size),file_ptr);//stdin incase of terminal input
+		6. fgets(string_name,n(size),file_ptr);//stdin incase of terminal input
 		7. fputc("char",file_ptr);//stdout incase of terminal output
 		8. fputs("string",file_ptr);//stdout incase of terminal output
 
@@ -509,4 +511,8 @@
 
 *Function pointers
 	int(*fptr)(int)(int);
-	fptr=func1;
+	//declaring a function pointer which takes two int as input and returns int
+
+	fptr=func1; //passing address of func1 to pointer
+
+	fptr(4,5); //using pointer instead of function name
