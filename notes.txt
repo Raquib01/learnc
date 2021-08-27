@@ -518,6 +518,9 @@
 	fptr(4,5); //using pointer instead of function name
 
 *Linking Files
+**Always include function prototype/declaration and structures unions in a header file
+  for good maintenance
+  
   You can include header files having function prototype/declaration
   using #include"something.h"
 
@@ -530,3 +533,32 @@
 
   you can link object file directly:
   gcc file1.o file2.o -o myprog
+
+*Communication between files
+  use extern keyword to use external global variable means global variable of external file
+  you can use extern for calling a function present in other file.
+  in that way, you dont have to declare a prototype of a function.
+  eg:
+  file1.C
+  ------int printing(void); //u dont need to declare prototype, if u use extern---------
+  extern printing();
+
+  file2.C
+  int printing(void){
+	  some code here
+  }
+
+  static vs global var
+  using static on global var restrict that var to be used from another file
+  
+  static vs functions
+  using static on functions restricts that functions to be used from another file
+
+  static vs local var
+  static preserves its value when it gets out of scope
+
+register:
+ it stores the variable in register of cpu for fast access
+ there is no guarantee that it will get stored, we advised compiler to do so..
+ but last call is of compiler
+ register class can be apply to only local variables and not global variables
